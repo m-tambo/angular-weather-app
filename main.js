@@ -17,6 +17,8 @@ angular
       $scope.findWeather = () => $location.path(`/weather/${$scope.zipInput}`)
    })
 
-   .controller('weatherCtrl', function ($scope) {
-         console.log('___welcome to the weather controller___')
-      })
+   .controller('weatherCtrl', function ($http, $routeParams) {
+      console.log('___welcome to the weather controller___')
+      $http.get(`http://api.wunderground.com/api/8568cf62bf879e71/conditions/q/${routeparams.zipInput}.json`)
+         .then
+   })
